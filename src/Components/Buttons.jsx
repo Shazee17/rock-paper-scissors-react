@@ -12,7 +12,8 @@ const Buttons = () => {
   const [userChoice, setUserChoice] = useState(null);
   const [computersChoice, setComputersChoice] = useState(null);
   const [winnerDeclared, setWinnerDeclared] = useState(false);
-  const [score, setScore] = useState(0);
+  const [userScore, setUserScore] = useState(0);
+  const [computerScore, setComputerScore] = useState(0);
 
   const handleChoice = (choice) => {
     setUserChoice(choice);
@@ -31,32 +32,45 @@ const Buttons = () => {
 
   const updateScore = (winner) => {
     if (winner === "You Win") {
-      setScore((prevScore) => prevScore + 1);
+      setUserScore((prevScore) => prevScore + 1);
     } else if (winner === "Computer Wins") {
-      setScore((prevScore) => prevScore - 1);
+      setComputerScore((prevScore) => prevScore + 1);
     }
   };
 
   return (
     <div className="container">
       <h1 className="gameTitle">'ROCK PAPER SCISSORS'</h1>
-      <div className="score">Score: {score}</div>
+
+      <div className="score">User Score: {userScore}</div>
+      <div className="score">Computer Score: {computerScore}</div>
+
       {!winnerDeclared && (
         <div className="button-container">
-          
-
           <div class="top-buttons">
-          <button onClick={() => handleChoice("Rock")}>
-            <FontAwesomeIcon icon={faHandBackFist} size="xl" />
-          </button>
+            <button title="Rock" onClick={() => handleChoice("Rock")}>
+              <FontAwesomeIcon
+                icon={faHandBackFist}
+                size="xl"
+                className="font-awesome-icon"
+              />
+            </button>
 
-          <button onClick={() => handleChoice("Paper")}>
-            <FontAwesomeIcon icon={faHand} size="xl" />
-          </button>
+            <button title="Paper" onClick={() => handleChoice("Paper")}>
+              <FontAwesomeIcon
+                icon={faHand}
+                size="xl"
+                className="font-awesome-icon"
+              />
+            </button>
           </div>
 
-          <button onClick={() => handleChoice("Scissors")}>
-            <FontAwesomeIcon icon={faHandScissors} size="xl" />
+          <button title="Scissors" onClick={() => handleChoice("Scissors")}>
+            <FontAwesomeIcon
+              icon={faHandScissors}
+              size="xl"
+              className="font-awesome-icon"
+            />
           </button>
         </div>
       )}

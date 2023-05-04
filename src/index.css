@@ -53,18 +53,27 @@ main{
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 10px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+  }
+  
+  .button-container button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 4px solid orange;
+    cursor: pointer;
   }
   
   .top-buttons {
     display: flex;
-    gap: 5px;
+    gap: 8px;
   }
   
   .top-buttons button {
@@ -74,4 +83,14 @@ main{
   .button-container button:nth-child(3) {
     margin-top: auto;
   }
+
+.font-awesome-icon{
+    height: 30px;
+    width: 30px;
+}
+
+.font-awesome-icon:hover{
+    color: orange;
+}
+  
   
