@@ -39,9 +39,13 @@ const Buttons = () => {
 
   return (
     <div className="container">
+      <h1 className="gameTitle">'ROCK PAPER SCISSORS'</h1>
       <div className="score">Score: {score}</div>
       {!winnerDeclared && (
-        <>
+        <div className="button-container">
+          
+
+          <div class="top-buttons">
           <button onClick={() => handleChoice("Rock")}>
             <FontAwesomeIcon icon={faHandBackFist} size="xl" />
           </button>
@@ -49,11 +53,12 @@ const Buttons = () => {
           <button onClick={() => handleChoice("Paper")}>
             <FontAwesomeIcon icon={faHand} size="xl" />
           </button>
+          </div>
 
           <button onClick={() => handleChoice("Scissors")}>
             <FontAwesomeIcon icon={faHandScissors} size="xl" />
           </button>
-        </>
+        </div>
       )}
 
       {winnerDeclared && (

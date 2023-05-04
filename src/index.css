@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
 *{
     padding: 0;
@@ -7,21 +7,7 @@
 }
 
 :root{
-    
-    --Scissors-Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-    --Paper-Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-    --Rock-Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
-    --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
-    --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
-
-    --Dark-Text: hsl(229, 25%, 31%);
-    --Score-Text: hsl(229, 64%, 46%);
-    --Header-Outline: hsl(217, 16%, 45%);
-
-
-    --Radial-Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
-
-    --Barlow-Semi-Condensed: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif
+    --Outfit: 'Outfit', Arial, Helvetica, sans-serif;
 }
 
 main{
@@ -29,11 +15,63 @@ main{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
+    background-color: rgb(39, 39, 39); 
+    font-family: var(--Outfit);
+    padding: 40px;
 }
 
 .container{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+
+    background-color: rgb(26, 26, 26);
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+
 }
+
+.gameTitle{
+    color: rgb(255, 166, 0);
+    text-align: center;
+    transition: color 0.5s ease;
+    cursor: pointer;
+    letter-spacing: 8px;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.gameTitle:hover{
+    color: white;
+}
+
+.score{
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .top-buttons button {
+    flex: 1;
+  }
+  
+  .button-container button:nth-child(3) {
+    margin-top: auto;
+  }
+  
