@@ -83,7 +83,12 @@ const Buttons = () => {
             winner={determineWinner(userChoice, computersChoice)}
           />
 
-          <button onClick={() => setWinnerDeclared(false)}>Try Again</button>
+          <button
+            className="retry-button"
+            onClick={() => setWinnerDeclared(false)}
+          >
+            Play Again
+          </button>
         </>
       )}
     </div>

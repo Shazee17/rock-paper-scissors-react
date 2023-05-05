@@ -92,5 +92,30 @@ main{
 .font-awesome-icon:hover{
     color: orange;
 }
+
+.winnerScreen{
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.winnerScreen h2{
+  color: orange;
+}
   
+.icon-container {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.retry-button{
+  padding: 5px;
+  color: black;
+  background-color: white;
+  font-family: var(--Outfit);
+  border-radius: 20px;
+}
+
   
