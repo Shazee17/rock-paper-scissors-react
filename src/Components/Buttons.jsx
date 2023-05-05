@@ -38,6 +38,12 @@ const Buttons = () => {
     }
   };
 
+  const resetScore = () => {
+    setComputerScore(0);
+    setUserScore(0);
+  }
+
+
   return (
     <div className="container">
       <h1 className="gameTitle">'ROCK PAPER SCISSORS'</h1>
@@ -72,6 +78,7 @@ const Buttons = () => {
               className="font-awesome-icon"
             />
           </button>
+
         </div>
       )}
 
@@ -89,6 +96,8 @@ const Buttons = () => {
           >
             Play Again
           </button>
+
+          <button onClick={resetScore} className="reset">Reset Score</button>
         </>
       )}
     </div>

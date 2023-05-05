@@ -110,7 +110,7 @@ main{
   align-items: center;
 }
 
-.retry-button{
+.retry-button, .reset{
   padding: 5px;
   color: black;
   background-color: white;
