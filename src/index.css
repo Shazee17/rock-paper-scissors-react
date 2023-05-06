@@ -118,4 +118,54 @@ main{
   border-radius: 20px;
 }
 
+
+
+@media screen and (min-width: 768px) {
+  main {
+  padding: 60px;
+  }
   
+  .container {
+  max-width: 600px;
+  padding: 50px;
+  }
+  
+  .gameTitle {
+  font-size: 2rem;
+  }
+  
+  .score {
+  font-size: 1rem;
+  }
+  
+  .button-container {
+  flex-direction: row;
+  gap: 20px;
+  padding: 40px;
+  }
+  
+  .button-container button {
+  height: 80px;
+  width: 80px;
+  border-width: 8px;
+  }
+  
+  .top-buttons button {
+  flex: 2;
+  }
+  
+  .button-container button:nth-child(3) {
+  margin-top: 0;
+  }
+  
+  .font-awesome-icon {
+  height: 40px;
+  width: 40px;
+  }
+  
+  .retry-button,
+  .reset {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  }
+}
